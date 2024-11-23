@@ -13,7 +13,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const app=express();
-app.use(cors({ origin:"https://ai-invoice-data-extracter-fbvmo46w4-husains-projects-e2c33c8e.vercel.app/"}));
+app.use(cors());
 
 const upload = multer({
     dest: 'uploads/',
