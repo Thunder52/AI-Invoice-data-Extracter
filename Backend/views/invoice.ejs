@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice</title>
+</head>
+<body>
+    <h2>Customer Details</h2>
+
+    <% if (invoiceData.customerDetails) { %>
+        <p><strong>Consignee:</strong> <%= invoiceData.customerDetails.consignee.name %></p>
+    
+        <% if (invoiceData.customerDetails.buyer) { %>
+            <p><strong>Buyer Name:</strong> <%= invoiceData.customerDetails.buyer.name %></p>
+            <p><strong>Buyer Address:</strong> <%= invoiceData.customerDetails.buyer.address %></p>
+            <p><strong>Buyer Phone:</strong> <%= invoiceData.customerDetails.buyer.phone %></p>
+        <% } else { %>
+            <p>No buyer information available.</p>
+        <% } %>
+    <% } else { %>
+        <p>No customer details available.</p>
+    <% } %>      
+</body>
+</html>
