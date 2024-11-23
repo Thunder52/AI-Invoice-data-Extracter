@@ -14,7 +14,7 @@ const FileUpload = ({ onDataReceived }) => {
     acceptedFiles.forEach((file) => formData.append("filename", file));
 
     try {
-      const response = await axios.post("http://localhost:3000/upload", formData, {
+      const response = await axios.post("https://ai-invoice-data-extracter-1.onrender.com/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
     //   console.log("Uploaded data:", response.data);
